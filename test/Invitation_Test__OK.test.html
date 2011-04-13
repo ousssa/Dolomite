@@ -1,0 +1,12 @@
+#{selenium 'Invitation Test OK'}
+	open('invitation')
+	// select("Choix du groupe", "label=Groupe A") // Fonctionnalité non encore développée 
+	waitForPageToLoad(2000)
+	type('nom', 'Tournesol')
+	type('prenom', 'Tryphon')
+	type('mail', 'nobody@hypertopic.org')
+	click(//input[@name='langue' and @value='fr'])
+ 	clickAndWait(//input[@name='validate'])
+	selenium.waitForPageToLoad(2000)
+	assertTextPresent(&{'invitation_success'})
+#{/selenium}

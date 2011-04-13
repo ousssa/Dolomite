@@ -1,0 +1,27 @@
+#{extends 'main.html' /}
+#{set title:'Welcome to Dolomite' /}
+
+<div>
+	<h1>&{"home_title"}</h1>
+	<p>&{"home_content"}</p>
+</div>
+
+#{if artcontent}
+	<div class="art-content">
+        <div class="art-Post">
+            <div class="art-Post-body">
+				<div class="art-Post-inner">
+                                <h2 class="art-PostHeader">
+                                    ${artcontent.content.Header()}
+                                </h2>
+                            <div class="art-PostContent">
+                                ${artcontent.content.Content()}
+								<div class="cleared"></div>
+							</div>
+                        
+					<div class="cleared"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+#{/if}
